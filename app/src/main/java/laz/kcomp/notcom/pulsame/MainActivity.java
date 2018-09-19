@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         EditText _distancia = (EditText) findViewById(R.id.distancia);
         RadioButton _rb1 = (RadioButton) findViewById(R.id.radioButton);
-        RadioButton _rb2 = (RadioButton) findViewById(R.id.radioButton2);
         TextView _tv = (TextView) findViewById(R.id.textView);
         String conv;
         if (_distancia.getText().length() == 0) {
