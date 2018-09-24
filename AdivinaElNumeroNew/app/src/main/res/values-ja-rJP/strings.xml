@@ -6,4 +6,5 @@
     <string name="boton">察す！</string>
     <string name="falloMayor">¿%1$d? ああ、我が番号より小さいだぜ！</string>
     <string name="falloMenor">¿%1$d? ああ、我が番号より大きい打是！</string>
+    <string name="victoria">やった！番号を見つかりました！%1$d回察した</string>
 </resources>
