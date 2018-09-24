@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">番号を察す！</string>
+    <string name="etiquetaSuperior">！</string>
+    <string name="intentalo">やってみて</string>
+    <string name="boton">察す！</string>
+    <string name="falloMayor">¿%1$d? ああ、我が番号より小さいだぜ！</string>
+    <string name="falloMenor">¿%1$d? ああ、我が番号より大きい打是！</string>
+</resources>

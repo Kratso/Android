@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adivina El Numero</string>
+    <string name="etiquetaSuperior">¡Inténtalo!</string>
+    <string name="intentalo">intentalo</string>
+    <string name="boton">boton</string>
+    <string name="falloMayor">¿%1$d? ¡Uy! El número que he pensado es mayor</string>
+    <string name="falloMenor">¿%1$d? ¡Uy! El número que he pensado es menor</string>
+</resources>
