@@ -4,7 +4,12 @@
     <string name="etiquetaSuperior">ある番号１と１００の間を思いました！\n察してみて！</string>
     <string name="intentalo">やってみて</string>
     <string name="boton">察す！</string>
-    <string name="falloMayor">¿%1$d? ああ、我が番号より小さいだぜ！</string>
-    <string name="falloMenor">¿%1$d? ああ、我が番号より大きい打是！</string>
+    <string name="falloMayor">¿%1$d? ああ、我が番号より大きいだぜ！</string>
+    <string name="falloMenor">¿%1$d? ああ、我が番号より小さいだぜ！</string>
+    <plurals name="numeroVeces" >
+        <item quantity="one"> もう%1$d回</item>
+        <item quantity="other">もう%1$d回</item>
+    </plurals>
     <string name="victoria">やった！番号を見つかりました！%1$d回察した</string>
+    <string name="victoriaBoton">¡もう一回!</string>
 </resources>

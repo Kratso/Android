@@ -3,6 +3,12 @@
     <string name="etiquetaSuperior">He pensado un número entre el 1 y el 100.\n ¡Intenta adivinarlo!</string>
     <string name="intentalo">¡Intentalo!</string>
     <string name="boton">Probar</string>
-    <string name="falloMayor">¿%1$d? ¡Uy! El número que he pensado es mayor</string>
+    <string name="falloMayor">¿%1$d? ¡Uy! El número que he pensado es menor</string>
+    <string name="falloMenor">¿%1$d? ¡Uy! El número que he pensado es mayor</string>
     <string name="victoria">¡Has acertado! Has acertado en %1$d intentos</string>
+    <plurals name="numeroVeces" >
+        <item quantity="one"> Llevas 1 intento</item>
+        <item quantity="other">Llevas %1$d intentos</item>
+    </plurals>
+    <string name="victoriaBoton">¡Volver a Intentar!</string>
 </resources>
