@@ -34,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
         _rgn = 65;//rng.nextInt(100) + 1;
         TextView tv = findViewById(R.id.textView);
         _message = tv.getText().toString();
+        if (savedInstanceState != null) {
+            _rgn = savedInstanceState.getInt(STATE_RGN);
+            _n_clicks = savedInstanceState.getInt(STATE_NUM_CLICKS);
+            _message = savedInstanceState.getString(STATE_SUP_MSG);
+            _victory_state = savedInstanceState.getInt(STATE_VICTORY_STATE);
+            if (_victory_state == STATE_NO_VICTORY) {
+                tv = findViewById(R.id.textView);
+                tv.setText(_message);
+                String format = getResources().getQuantityString(R.plurals.numeroVeces, _n_clicks);
+                String cadFinal = String.format(format, _n_clicks);
+                tv = findViewById(R.id.textView2);
+                tv.setText(cadFinal);
+                System.out.println(_victory_state);
+            } else {
+                paintVictory();
+                System.out.println(_victory_state);
+            }
+        }
     }
 
     @Override
@@ -45,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         if (_victory_state == STATE_NO_VICTORY) {
             TextView tv = findViewById(R.id.textView);
             tv.setText(_message);
-            String format = getResources().getString(R.string.numeroVeces);
+            String format = getResources().getQuantityString(R.plurals.numeroVeces, _n_clicks);
             String cadFinal = String.format(format, _n_clicks);
             tv = findViewById(R.id.textView2);
             tv.setText(cadFinal);
@@ -57,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void paintVictory() {
+        System.out.println(_victory_state);
         String format = getResources().getString(R.string.victoria);
         String cadFinal = String.format(format, _n_clicks);
         TextView tv = findViewById(R.id.textView);
@@ -68,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         button.setText(R.string.victoriaBoton);
         _victory_state = STATE_VICTORY;
         _message = cadFinal;
+        System.out.println(_victory_state);
     }
 
     @Override
@@ -76,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         outInstance.putInt(STATE_NUM_CLICKS, _n_clicks);
         outInstance.putInt(STATE_RGN, _rgn);
         outInstance.putString(STATE_SUP_MSG, _message);
-        outInstance.getInt(STATE_VICTORY_STATE, _victory_state);
+        outInstance.putInt(STATE_VICTORY_STATE, _victory_state);
 
     }
 
@@ -84,33 +104,33 @@ public class MainActivity extends AppCompatActivity {
         EditText et = findViewById(R.id.editText);
 
         if (_victory_state == STATE_NO_VICTORY) {
-            if (et.getText().toString().matches("[0-9]+")) {
-                int numUsuario = Integer.parseInt(et.getText().toString());
-                _n_clicks++;
-                String format = getResources().getQuantityString(R.plurals.numeroVeces, 1);
-                String cadFinal = String.format(format, _n_clicks);
-                TextView tv = findViewById(R.id.textView2);
+
+            int numUsuario = Integer.parseInt(et.getText().toString());
+            _n_clicks++;
+            String format = getResources().getQuantityString(R.plurals.numeroVeces, _n_clicks);
+            String cadFinal = String.format(format, _n_clicks);
+            TextView tv = findViewById(R.id.textView2);
+            tv.setText(cadFinal);
+            tv = findViewById(R.id.textView);
+            if (numUsuario < _rgn) {
+                format = getResources().getString(R.string.falloMenor);
+                cadFinal = String.format(format, numUsuario);
                 tv.setText(cadFinal);
-                tv = findViewById(R.id.textView);
-                if (numUsuario < _rgn) {
-                    format = getResources().getString(R.string.falloMenor);
-                    cadFinal = String.format(format, numUsuario);
-                    tv.setText(cadFinal);
-                    _message = cadFinal;
-                    et.setText("");
-                } else if (numUsuario > _rgn) {
-                    format = getResources().getString(R.string.falloMayor);
-                    cadFinal = String.format(format, numUsuario);
-                    tv.setText(cadFinal);
-                    _message = cadFinal;
-                    et.setText("");
-                } else {
-                    et.setText("");
-                    tv = findViewById(R.id.textView2);
-                    tv.setText("");
-                    paintVictory();
-                }
+                _message = cadFinal;
+                et.setText("");
+            } else if (numUsuario > _rgn) {
+                format = getResources().getString(R.string.falloMayor);
+                cadFinal = String.format(format, numUsuario);
+                tv.setText(cadFinal);
+                _message = cadFinal;
+                et.setText("");
+            } else {
+                et.setText("");
+                tv = findViewById(R.id.textView2);
+                tv.setText("");
+                paintVictory();
             }
+
         } else {
             restart();
         }
