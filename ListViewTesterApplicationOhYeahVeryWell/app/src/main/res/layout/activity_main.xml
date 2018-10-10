@@ -1,9 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <TextView android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:text="@string/haz_clic" />
-    <ListView android:id="@+id/ListaOpciones" android:layout_width="fill_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/absoluteLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    tools:context="laz.kcomp.notcom.listviewtesterapplicationohyeahverywell.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="clicky"/>
-</LinearLayout>
+        android:text="Selecciona los deportes que te gustan y pulsa 'Aceptar'"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/miLista"
+            android:layout_width="match_parent"
+            android:layout_height="384dp"
+            android:layout_x="1dp"
+            android:layout_y="152dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/botonAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar" />
+
+
+</android.support.constraint.ConstraintLayout>

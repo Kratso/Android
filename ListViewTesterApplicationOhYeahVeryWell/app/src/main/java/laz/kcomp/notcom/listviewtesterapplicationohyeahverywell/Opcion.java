@@ -5,37 +5,43 @@ package laz.kcomp.notcom.listviewtesterapplicationohyeahverywell;
  */
 
 public class Opcion {
-    // Cada opcion tiene un titulo y un subtitulo
-    private String titulo;
-    private int icono;
-    private boolean checked;
-
-    public Opcion(String titulo, int icono, boolean checked) {
-        this.titulo = titulo;
-        this.icono = icono;
-        this.checked = checked;
-    }
-
-    public int getIcono() {
-        return icono;
-    }
-
-    public void setIcono(int icono) {
-        this.icono = icono;
-    }
-
-    public boolean isChecked() {
-        return checked;
-    }
-
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
-
-    public String getTitulo(){
-        return titulo;
-    }
+	//Atributos.
+	String nombre;
+	int ref_icono;
+	boolean check;
 
 
+	//Constructores.
+	public Opcion(String nombre, int ref_icono, boolean check)
+	{
+		this.nombre=nombre;
+		this.ref_icono=ref_icono;
+		this.check=check;
+	}
 
+	//Métodos.
+	//Getters&Setters.
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getRef_icono() {
+		return ref_icono;
+	}
+
+	public boolean isCheck() {
+		return check;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setRef_icono(int ref_icono) {
+		this.ref_icono = ref_icono;
+	}
+
+	public void setCheck(boolean check) {
+		this.check = check;
+	}
 }
