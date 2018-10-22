@@ -109,7 +109,17 @@ public class MainActivity extends AppCompatActivity implements DialogoAltas.Edit
 			case R.id.editar:
 				indice = info.position;
 				DialogoModificaciones dialogo = new DialogoModificaciones();
+
+				String nombreaeditar = productos.get(info.position).getNombre();
+				//EditarDFragment editarDFragment= new EditarDFragment(nombreaeditar,info.position);
 				dialogo.show(fm, "Dialog Fragment");
+				DialogoModificaciones editarDFragment= new DialogoModificaciones();
+				Bundle bundle = new Bundle(2);
+				bundle.putString("nombreaeditar", nombreaeditar);
+				bundle.putInt("posicion", info.position);
+				editarDFragment.setArguments(bundle);
+				editarDFragment.show(fm, "Edita articulo");
+
 				return true;
 			default:
 				return super.onContextItemSelected(item);

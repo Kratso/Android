@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,12 +41,22 @@ public class DialogoModificaciones extends DialogFragment {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 
+		String elementoeditar;
+		final int posicionaeditar;
+
+		//tomamos los datos del bundle
+		elementoeditar= getArguments().getString("nombreaeditar");
+		posicionaeditar=getArguments().getInt("posicion");
+
+
+		//rellenamos el EditText
 
 		l = getActivity().getLayoutInflater();
 		v = (l.inflate(R.layout.layout_dialog_altas, null));
 		TextView t1 = (TextView) v.findViewById(R.id.text1);
 		t1.setText("Modifica Artículo");
 		final TextView texto = (TextView) v.findViewById(R.id.introducirTexto);
+		texto.setText(elementoeditar);
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
 		builder.setView(v)
