@@ -5,7 +5,7 @@
     android:id="@+id/absoluteLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.samuel.p7.MainActivity">
+    tools:context="laz.mateo.notcom.com.implicit.MainActivity">
 
 
     <Button
