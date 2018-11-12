@@ -1,12 +1,12 @@
-anemona,Anemona común,Anemonia sulcata,10,Fondo de roca
-bigaro,Bígaro,Littorina litorea,2,Fondo de roca
+anemona,Anemona comï¿½n,Anemonia sulcata,10,Fondo de roca
+bigaro,Bï¿½garo,Littorina litorea,2,Fondo de roca
 cangrejocorredor,Cangrejo corredor,Pachygrapsus marmoratus,10,Fondo de roca
-cangrejo,Cangrejo ermitaño,Dardanus arrosor,6,Fondo de roca
+cangrejo,Cangrejo ermitaï¿½o,Dardanus arrosor,6,Fondo de roca
 Caracola,,6,Fondo de roca
 coralnaranja,Coral naranja,Astroides calycularis,50,Fondo de roca
 cystoseira,Cystoseira,Cystoseira mediterranea,20,Fondo de roca
 erizoblanco,Erizo blanco,,12,Fondo de roca
-erizocomun,Erizo común,,8,Fondo de roca
+erizocomun,Erizo comï¿½n,,8,Fondo de roca
 erizovioleta,Erizo violeta,Sphaerachinus granularis,12,Fondo de roca
 esponja,Esponja,Ircinia fasciculata,20,Fondo de roca
 estrellaroja,Estrella roja,Echinaster sepositus,30,Fondo de roca
