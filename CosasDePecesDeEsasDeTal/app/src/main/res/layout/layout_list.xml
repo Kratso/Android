@@ -11,7 +11,7 @@
         android:layout_height="117dp"
         android:layout_x="3dp"
         android:layout_y="3dp"
-        app:srcCompat="@drawable/anemona" />
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textPrincipal"
